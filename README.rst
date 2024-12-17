@@ -191,7 +191,7 @@ Implemented Algorithms
 
 SocialED implements the following algorithms:
 ==================  ===============  =======================  ============  ==============  =========================
-     Algorithm            Year             Backbone           scenario      Supervision              Ref
+Algorithm           Year             Backbone                 scenario      Supervision     Ref
 ==================  ===============  =======================  ============  ==============  =========================
         LDA               2003             Topic              Offline       Unsupervised    [#Blei2003lda]_
       BiLSTM              2005        Deep learning           Offline       Supervised      [#Graves2005bilstm]_
@@ -377,10 +377,6 @@ References
 
 .. [#Ren2021clkd] Ren, J., Peng, H., Jiang, L., Wu, J., Tong, Y., Wang, L., Bai, X., Wang, B., and Yang, Q., 2021. Transferring knowledge distillation for multilingual social event detection. arXiv preprint arXiv:2108.03084.
 
-.. [#Cui2021mvgan] Cui, W., Zhang, Y., Liu, Z., and Yu, P.S., 2021. MVGAN: A Multi-view Graph Generative Adversarial Network for Anomaly Detection. In Proceedings of the 2021 IEEE International Conference on Big Data (Big Data), pp. 4513-4522. IEEE.
-
-.. [#Peng2021ppgcn] Peng, H., Wu, J., Cao, Y., Dou, Y., Li, J., and Yu, P.S., 2021. PP-GCN: Privacy-Preserving Graph Convolutional Networks for Social Event Detection. In Proceedings of the Web Conference 2021, pp. 3383-3395.
-
 .. [#Cao2021kpgnn] Cao, Y., Peng, H., Wu, J., Dou, Y., Li, J., and Yu, P.S., 2021. Knowledge-preserving incremental social event detection via heterogeneous GNNs. In Proceedings of the Web Conference 2021, pp. 3383-3395.
 
 .. [#Peng2022finevent] Peng, H., Li, J., Gong, Q., Song, Y., Ning, Y., Lai, K., and Yu, P.S., 2019. Fine-grained event categorization with heterogeneous graph convolutional networks. arXiv preprint arXiv:1906.04580.
@@ -396,6 +392,8 @@ References
 .. [#Li2024rplmsed] Li, P., Yu, X., Peng, H., Xian, Y., Wang, L., Sun, L., Zhang, J., and Yu, P.S., 2024. Relational Prompt-based Pre-trained Language Models for Social Event Detection. arXiv preprint arXiv:2404.08263.
 
 .. [#Cao2024hisevent] Cao, Y., Peng, H., Yu, Z., and Philip, S.Y., 2024. Hierarchical and incremental structural entropy minimization for unsupervised social event detection. In Proceedings of the AAAI Conference on Artificial Intelligence, 38(8), pp. 8255-8264.
+
+.. [#Yang2024adpsemevent] Yang, Z., Wei, Y., Li, H., et al. Adaptive Differentially Private Structural Entropy Minimization for Unsupervised Social Event Detection[C]//Proceedings of the 33rd ACM International Conference on Information and Knowledge Management. 2024: 2950-2960.
 
 .. [#liu2024pygod] Liu, K., Dou, Y., Ding, X., Hu, X., Zhang, R., Peng, H., Sun, L., and Yu, P.S., 2024. PyGOD: A Python library for graph outlier detection. Journal of Machine Learning Research, 25(141), pp. 1-9.
 
