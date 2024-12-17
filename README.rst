@@ -228,38 +228,54 @@ Supported Datasets
 -   **CrisisMMD**: CrisisMMD includes 18,082 manually annotated tweets collected during 7 major natural disasters in 2017, including earthquakes, hurricanes, wildfires, and floods from different parts of the world.
 -   **CrisisNLP**: CrisisNLP comprises 25,976 crisis-related tweets covering 11 different events. The dataset includes human-labeled tweets, dictionaries, word embeddings and related tools for crisis information analysis.
 -   **HumAID**: HumAID contains 76,484 manually annotated tweets collected during 19 major natural disaster events from 2016 to 2019, including earthquakes, hurricanes, wildfires, and floods across different regions.
--   **Mix_data**: A combined dataset containing:
-    - ICWSM2018: 21,571 human-labeled tweets from the 2015 Nepal earthquake and 2013 Queensland floods
-    - ISCRAM2013: 4,676 labeled tweets from the 2011 Joplin tornado
-    - ISCRAM2018: 49,804 tweets from Hurricanes Harvey, Irma, and Maria in 2017
-    - BigCrisisData: 2,438 tweets with crisis-related classifications
+-   **Mix_data**: A combined dataset containing multiple crisis-related tweet collections:
+    - **ICWSM2018**: 21,571 human-labeled tweets from the 2015 Nepal earthquake and 2013 Queensland floods
+    - **ISCRAM2013**: 4,676 labeled tweets from the 2011 Joplin tornado  
+    - **ISCRAM2018**: 49,804 tweets from Hurricanes Harvey, Irma, and Maria in 2017
+    - **BigCrisisData**: 2,438 tweets with crisis-related classifications
 -   **KBP**: KBP contains 85,569 texts covering 100 different event types. It focuses on extracting structured event information and serves as a benchmark dataset for information extraction systems.
 -   **Event2012_100**: Event2012_100 contains 100 events with a total of 15,019 tweets, where the maximal event comprises 2,377 tweets, and the minimally has 55 tweets, with an imbalance ratio of approximately 43.
 -   **Event2018_100**: Event2018_100 contains 100 events with a total of 19,944 tweets, where the maximal event comprises 4,189 tweets and the minimally has 27 tweets, an imbalance ratio of approximately 155.
 -   **Arabic_100**: Arabic_100 contains 100 events with a total of 3,022 tweets, where the maximal event comprises 312 tweets and the minimally has 7 tweets, with an imbalance ratio of approximately 44.
 
 
-==================  ===============  ================  ============  ==============  =========================
-     Dataset        |      Subset    |    Long tail    |  Language   |    Events     |         Texts
-==================  ===============  ================  ============  ==============  =========================
-    Event2012       |               |       No        |   English   |     503       |        68,841
-    Event2018       |               |       No        |   French    |     257       |        64,516
- Arabic_Twitter     |               |       No        |   Arabic    |      7        |         9,070
-     MAVEN          |               |       No        |   English   |     164       |        10,242
-  CrisisLexT26      |               |       No        |   English   |      26       |        27,933
-  CrisisLexT6       |               |       No        |   English   |       6       |        60,082
-   CrisisMMD        |               |       No        |   English   |       7       |        18,082
-   CrisisNLP        |               |       No        |   English   |      11       |        25,976
-    HumAID          |               |       No        |   English   |      19       |        76,484
-                    |   ICWSM2018   |       No        |   English   |       5       |        21,571
-   Mix_data         |   ISCRAM2013  |                 |   English   |               |        4,676
-                    |   ISCRAM2018  |                 |   English   |               |        49,804
-                    | BigCrisisData |                 |   English   |               |        2,438
-      KBP           |               |       No        |   English   |     100       |        85,569
-  Event2012_100     |               |      Yes        |   English   |     100       |        15,019
-  Event2018_100     |               |      Yes        |   French    |     100       |        19,944
-   Arabic_100       |               |      Yes        |   Arabic    |       7       |         3,022
-==================  ===============  ================  ============  ==============  =========================
+Dataset
+-------
+
++----------------+-------------+--------------+------------+--------------+-------------+
+|    Dataset     |   Subset    |  Long tail   |  Language  |   Events     |    Texts    |
++================+=============+==============+============+==============+=============+
+|   Event2012    |             |     No       |  English   |    503       |   68,841    |
++----------------+-------------+--------------+------------+--------------+-------------+
+|   Event2018    |             |     No       |  French    |    257       |   64,516    |
++----------------+-------------+--------------+------------+--------------+-------------+
+|Arabic_Twitter  |             |     No       |  Arabic    |     7        |    9,070    |
++----------------+-------------+--------------+------------+--------------+-------------+
+|    MAVEN       |             |     No       |  English   |    164       |   10,242    |
++----------------+-------------+--------------+------------+--------------+-------------+
+| CrisisLexT26   |             |     No       |  English   |     26       |   27,933    |
++----------------+-------------+--------------+------------+--------------+-------------+
+| CrisisLexT6    |             |     No       |  English   |     6        |   60,082    |
++----------------+-------------+--------------+------------+--------------+-------------+
+|  CrisisMMD     |             |     No       |  English   |     7        |   18,082    |
++----------------+-------------+--------------+------------+--------------+-------------+
+|  CrisisNLP     |             |     No       |  English   |     11       |   25,976    |
++----------------+-------------+--------------+------------+--------------+-------------+
+|   HumAID       |             |     No       |  English   |     19       |   76,484    |
++----------------+-------------+--------------+------------+--------------+-------------+
+|                | ICWSM2018   |     No       |  English   |     5        |   21,571    |
+|   Mix_data     | ISCRAM2013  |             |  English   |              |    4,676    |
+|                | ISCRAM2018  |             |  English   |              |   49,804    |
+|                |BigCrisisData|             |  English   |              |    2,438    |
++----------------+-------------+--------------+------------+--------------+-------------+
+|     KBP        |             |     No       |  English   |    100       |   85,569    |
++----------------+-------------+--------------+------------+--------------+-------------+
+|Event2012_100   |             |    Yes       |  English   |    100       |   15,019    |
++----------------+-------------+--------------+------------+--------------+-------------+
+|Event2018_100   |             |    Yes       |  French    |    100       |   19,944    |
++----------------+-------------+--------------+------------+--------------+-------------+
+| Arabic_100     |             |    Yes       |  Arabic    |     7        |    3,022    |
++----------------+-------------+--------------+------------+--------------+-------------+
 
 
 Library Design and Implementation
@@ -278,6 +294,7 @@ Inspired by the API designs of established frameworks, we developed a unified AP
 1. ``preprocess`` provides a flexible framework for handling various preprocessing tasks, such as graph construction and tokenization
 2. ``fit`` trains the detection algorithms on the preprocessed data, adjusting model parameters and generating necessary statistics for predictions
 3. ``detection`` uses the trained model to identify events from the input data, returning the detected events
+4. ``evaluate`` assesses the performance of the detection results by comparing predictions with ground truth data, providing metrics like precision, recall and F1-score
 
 Example Usage
 ^^^^^^^^^^^^
