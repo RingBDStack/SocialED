@@ -87,8 +87,8 @@ SocialED plays a crucial role in various downstream applications, including:
 * And more...
 
 
-.. image:: https://github.com/ChenBeici/SocialED/blob/main/docs/API.png?raw=true
-   :target: https://github.com/ChenBeici/SocialED/blob/main/docs/API.png?raw=true
+.. image:: https://github.com/RingBDStack/SocialED/blob/main/docs/API.png?raw=true
+   :target: https://github.com/RingBDStack/SocialED/blob/main/docs/API.png?raw=true
    :width: 1050
    :alt: SocialED API
    :align: center
