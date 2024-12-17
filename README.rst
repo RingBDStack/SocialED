@@ -38,8 +38,12 @@
    :target: https://github.com/RingBDStack/SocialED/blob/master/LICENSE
    :alt: License
 
+.. |badge_codeql| image:: https://github.com/ChenBeici/SocialED/actions/workflows/codeql.yml/badge.svg
+   :target: https://github.com/ChenBeici/SocialED/actions/workflows/codeql.yml
+   :alt: CodeQL
 
 -----
+
 
 
 
@@ -51,27 +55,45 @@ A Python Library for Social Event Detection
 The field of Social Event Detection represents a pivotal area of research within the broader domains of artificial 
 intelligence and natural language processing. Its objective is the automated identification and analysis of events from 
 social media platforms such as Twitter and Facebook. Such events encompass a wide range of occurrences, including natural 
-disasters and viral phenomena. 
+disasters and viral phenomena.
 
-To address this gap, we present Social Event Detection Python library called **SocialED**, an
-**open-source Python library** designed to facilitate the development and evaluation of social
-event detection algorithms. 
+SocialED is a comprehensive, open-source Python library designed to support social event detection (SED) tasks, integrating 19 detection algorithms and 14 diverse datasets. It provides a unified API with detailed documentation, offering researchers and practitioners a complete solution for event detection in social media. The library is built with modularity in mind, enabling users to adapt and extend components for various usages easily. SocialED supports a wide range of preprocessing techniques, such as graph construction and tokenization, and includes standardized interfaces for training models and making predictions. With its integration of popular deep learning frameworks, SocialED ensures high efficiency and scalability across CPU and GPU environments. Built adhering to high code quality standards, including unit testing, continuous integration, and code coverage, SocialED ensures robust, maintainable software.
 
+Key Features
+-----------
 
-**SocialED stands out for**:
-
-* **Broad spectrum of over 10 social event detection algorithms**, including classic techniques like Latent Dirichlet Allocation (LDA) and modern deep learning models such as BiLSTM, Word2Vec, GloVe, and more.
-* **Unified APIs, comprehensive documentation, and practical examples** that enable users to format their data consistently, ensuring smooth integration with all social event detectors within SocialED.
-* **Customizable and modular components** that empower users to tailor detection algorithms to meet specific requirements, facilitating the setup of social event detection workflows.
-* **Rich utility functions** that streamline the process of building and executing social event detection tasks.
-* **Reliable implementation** featuring unit tests, cross-platform continuous integration, as well as code coverage and maintainability assessments.
+* **Comprehensive Algorithm Collection**: Integrates 19 detection algorithms and supports 14 widely-used datasets, with continuous updates to include emerging methods
+* **Unified API Design**: Implements algorithms with a consistent interface, allowing seamless data preparation and integration across all models
+* **Modular Components**: Provides customizable components for each algorithm, enabling users to adjust models to specific needs
+* **Rich Utility Functions**: Offers tools designed to simplify the construction of social event detection workflows
+* **Robust Implementation**: Includes comprehensive documentation, examples, unit tests, and maintainability features
 
 
-SocialED includes **10+** graph outlier detection algorithms.
+
+
+SocialED includes **19** social event detection algorithms.
 For consistency and accessibility, SocialED is developed on top of `DGL <https://www.dgl.ai/>`_ 
 and `PyTorch <https://pytorch.org/>`_, and follows the API design of `PyOD <https://github.com/yzhao062/pyod>`_ 
 and `PyGOD <https://github.com/pygod-team/pygod>`_.
-See examples below for detecting outliers with SocialED in 5 lines!
+See examples below for detecting outliers with SocialED in 7 lines!
+
+
+
+SocialED plays a crucial role in various downstream applications, including:
+
+* Crisis management
+* Public opinion monitoring
+* Fake news detection
+* And more...
+
+
+.. image:: https://github.com/ChenBeici/SocialED/blob/main/docs/API.png?raw=true
+   :target: https://github.com/ChenBeici/SocialED/blob/main/docs/API.png?raw=true
+   :width: 1050
+   :alt: SocialED API
+   :align: center
+
+
 
 
 
@@ -134,47 +156,15 @@ Alternatively, you could clone and run setup.py file:
 * torch_geometric>=2.5.3
 * dgl>=0.6.0
 
-API Cheatsheet & Reference
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Full API Reference: (https://socialed.readthedocs.io). API cheatsheet for all detectors:
-
-* **preprocess()**\ :  Preprocess the dataset.
-* **fit()**\ : Fit the detector with train data.
-* **detector()**\: Initialize and configure the detection model, preparing it for training and prediction tasks.
-* **evaluate(predictions, groundtruth)**\: Assess the performance of the detector by comparing predictions with the actual data.
-
-
-
-
-Usage & Example
----------------
-
-.. code-block:: python
-
-   from SocialED.detector import KPGNN
-   from SocialED.data import Event2012_Dataset
-
-   # Load the dataset using the Event2012_Dataset class
-   dataset = Event2012_Dataset.load_data()
-
-   # Create an instance of the KPGNN class and loaded dataset
-   model = KPGNN(dataset)
-
-   # Run the KPGNN instance
-   model.preprocess()
-   model = model.fit()
-   model.detection()
-
-
 
 Collected Algorithms
 --------------------
 
-10+ different methods in total are implemented in this library. We provide an overview of their characteristics as follows.
+The library integrates methods ranging from classic approaches like LDA and BiLSTM to specialized techniques such as KPGNN, QSGNN, FinEvent, and HISEvent. Despite significant advancements in detection methods, deploying these approaches or conducting comprehensive evaluations has remained challenging due to the absence of a unified framework. SocialED addresses this gap by providing a standardized platform for researchers and practitioners in the SED field.
 
-Algorithm Descriptions
+Implemented Algorithms
 ----------------------
+
 
 - **LDA**: Latent Dirichlet Allocation (LDA) is a generative statistical model that allows sets of observations to be explained by unobserved groups. It is particularly useful for discovering the hidden thematic structure in large text corpora.
 - **BiLSTM**: Bi-directional Long Short-Term Memory (BiLSTM) networks enhance the capabilities of traditional LSTMs by processing sequences in both forward and backward directions. This bidirectional approach is effective for tasks like sequence classification and time series prediction.
@@ -185,7 +175,6 @@ Algorithm Descriptions
 - **SBERT**: Sentence-BERT (SBERT) modifies the BERT network to generate semantically meaningful sentence embeddings that can be compared using cosine similarity. It is particularly useful for sentence clustering and semantic search.
 - **EventX**: EventX is designed for online event detection in social media streams, processing tweets in real-time to identify emerging events by clustering similar content. This framework is optimized for high-speed data environments.
 - **CLKD**: cross-lingual knowledge distillation (CLKD) combines a convolutional neural network with dynamic time warping to align sequences and detect events in streaming data. This online algorithm is effective for real-time applications.
-- **MVGAN**: Multi-View Graph Attention Network (MVGAN) leverages multiple data views to enhance event detection accuracy. This offline algorithm uses GANs to model complex data distributions, improving robustness against noise and incomplete data.
 - **KPGNN**: Knowledge-Preserving Graph Neural Network (KPGNN) is designed for incremental social event detection. It utilizes rich semantics and structural information in social messages to continuously detect events and extend its knowledge base. KPGNN outperforms baseline models, with potential for future research in event analysis and causal discovery in social data.
 - **Finevent**: Fine-Grained Event Detection (FinEvent) uses a reinforced, incremental, and cross-lingual architecture for social event detection. It employs multi-agent reinforcement learning and density-based clustering (DRL-DBSCAN) to improve performance in various detection tasks. Future work will extend RL-guided GNNs for event correlation and evolution.
 - **QSGNN**: Quality-Aware Self-Improving Graph Neural Network (QSGNN) improves open set social event detection with a pairwise loss and orthogonal constraint for training. It uses similarity distributions for pseudo labels and a quality-aware strategy to reduce noise, achieving state-of-the-art results in both closed and open set scenarios.
@@ -194,82 +183,175 @@ Algorithm Descriptions
 - **UCLSED**: Uncertainty-Guided Class Imbalance Learning Framework (UCLSED) enhances model generalization in imbalanced social event detection tasks. It uses an uncertainty-guided contrastive learning loss to handle uncertain classes and combines multi-view architectures with Dempster-Shafer theory for robust uncertainty estimation, achieving superior results.
 - **RPLMSED**: Relational Prompt-Based Pre-Trained Language Models for Social Event Detection (RPLMSED) uses pairwise message modeling to address missing and noisy edges in social message graphs. It leverages content and structural information with a clustering constraint to enhance message representation, achieving state-of-the-art performance in various detection tasks.
 - **HISevent**: Structural Entropy-Based Social Event Detection (HISevent) is an unsupervised tool that explores message correlations without the need for labeling or predetermining the number of events. HISevent combines GNN-based methods' advantages with efficient and robust performance, achieving new state-of-the-art results in closed- and open-set settings.
+- **ADPSEMEvent**: Adaptive Differential Privacy Social Event Message Event Detection (ADPSEMEvent) is an unsupervised framework that prioritizes privacy while detecting social events. It uses a two-stage approach: first constructing a private message graph using adaptive differential privacy to maximize privacy budget usage, then applying a novel 2-dimensional structural entropy minimization algorithm for event detection. This method effectively balances privacy protection with data utility in open-world settings.
 
 
 
-We provide their statistics as follows.
-
+SocialED implements the following algorithms:
 ==================  ===============  ================    ============  ==============  =========================
      Algorithm      |      Year      |    Category       |  Environment  |  Supervision   |            Ref
 ==================  ===============  ================    ============  ==============  =========================
-        LDA         |      2003      |       Topic       |    Offline    |   Supervised    |  [#Blei2003lda]_
-      BiLSTM        |      2005      |  Deep learning    |    Offline    |   Supervised    |  [#Graves2005bilstm]_
-     Word2Vec       |      2013      | Word embeddings   |    Offline    |   Supervised    |  [#Mikolov2013word2vec]_
-       GloVe        |      2014      | Word embeddings   |    Offline    |   Supervised    |  [#Pennington2014glove]_
-        WMD         |      2015      |    Similarity     |    Offline    |   Supervised    |  [#Kusner2015wmd]_
-       BERT         |      2018      |       PLMs        |    Offline    |   Supervised    |  [#Devlin2018bert]_
-      SBERT         |      2019      |       PLMs        |    Offline    |   Supervised    |  [#Reimers2019sbert]_
-      EventX        |      2020      | Community detection |  Online    |   Supervised    |  [#Liu2020eventx]_
+        LDA         |      2003      |       Topic       |    Offline    | Unsupervised    |  [#Blei2003lda]_
+      BiLSTM        |      2005      |  Deep learning    |    Offline    | Unsupervised    |  [#Graves2005bilstm]_
+     Word2Vec       |      2013      | Word embeddings   |    Offline    | Unsupervised    |  [#Mikolov2013word2vec]_
+       GloVe        |      2014      | Word embeddings   |    Offline    | Unsupervised    |  [#Pennington2014glove]_
+        WMD         |      2015      |    Similarity     |    Offline    | Unsupervised    |  [#Kusner2015wmd]_
+       BERT         |      2018      |       PLMs        |    Offline    | Unsupervised    |  [#Devlin2018bert]_
+      SBERT         |      2019      |       PLMs        |    Offline    | Unsupervised    |  [#Reimers2019sbert]_
+      EventX        |      2020      | Community detection |  Offline    | Unsupervised    |  [#Liu2020eventx]_
        CLKD         |      2021      |       GNNs        |    Online     |   Supervised    |  [#Ren2021clkd]_
       KPGNN         |      2021      |       GNNs        |    Online     |   Supervised    |  [#Cao2021kpgnn]_
      FinEvent       |      2022      |       GNNs        |    Online     |   Supervised    |  [#Peng2022finevent]_
       QSGNN         |      2022      |       GNNs        |    Online     |   Supervised    |  [#Ren2022qsgnn]_
       ETGNN         |      2023      |       GNNs        |    Offline    | Unsupervised    |  [#Ren2023etgnn]_
        HCRC         |      2023      |       GNNs        |    Online     | Unsupervised    |  [#Guo2023hcrc]_
-      UCLSED        |      2023      |       GNNs        |    Offline    |   Supervised    |  [#Ren2023uclsad]_
+      UCLSED        |      2023      |       GNNs        |    Offline    | Unsupervised    |  [#Ren2023uclsad]_
      RPLMSED        |      2024      |       PLMs        |    Online     |   Supervised    |  [#Li2024rplmsed]_
-     HISEvent       |      2024      | Community detection |  Online    | Unsupervised    |  [#Cao2024hisevent]_
-   ADPSEMEvent      |      2024      | Community detection |  Online    | Unsupervised    |  [#Yang2024adpsemevent]_
+     HISEvent       |      2024      | Community detection |  Online     | Unsupervised    |  [#Cao2024hisevent]_
+   ADPSEMEvent      |      2024      | Community detection |  Online     | Unsupervised    |  [#Yang2024adpsemevent]_
+     HyperSED       |      2025      | Community detection |  Online     | Unsupervised    |  [#Yu2025hypersed]_
 ==================  ===============  ================  ============  ==============  =========================
 
 
 
 
-
-Collected Datasets
-------------------
-
--   **ACE2005**: The ACE2005 dataset is a comprehensive collection of news articles annotated for entities, relations, and events. It includes a diverse range of event types and is widely used for event extraction research.
--   **MAVEN**: MAVEN (Massive event) is a large-scale dataset for event detection that consists of over 11,000 events annotated across a wide variety of domains. It is designed to facilitate the development of robust event detection models.
--   **TAC KBP**: The TAC KBP dataset is part of the Text Analysis Conference Knowledge Base Population track. It contains annotated events, entities, and relations, focusing on extracting structured information from unstructured text.
--   **CrisisLexT26**: CrisisLexT26 is a dataset containing tweets related to 26 different crisis events. It is used to study information dissemination and event detection in social media during emergencies.
--   **CrisisLexT6**: CrisisLexT6 is a smaller dataset from the CrisisLex collection, focusing on six major crisis events. It includes annotated tweets that provide valuable insights into public response and information spread during crises.
--   **Event2012**: Event2012 is a dataset composed of tweets related to various events in 2012. It includes a wide range of event types and is used for studying event detection and classification in social media.
--   **Event2018**: Event2018 consists of French tweets annotated for different event types. It provides a multilingual perspective on event detection, allowing researchers to explore language-specific challenges and solutions.
--   **KBP2017**: KBP2017 is part of the Knowledge Base Population track and focuses on extracting entities, relations, and events from text. It is a valuable resource for developing and benchmarking information extraction systems.
--   **CySecED**: CySecED is a dataset designed for cybersecurity event detection. It includes annotated cybersecurity events and is used to study threat detection and response in textual data.
--   **FewED**: FewED is a dataset for few-shot event detection, providing a limited number of annotated examples for each event type. It is designed to test the ability of models to generalize from few examples.
+Supported Datasets
+^^^^^^^^^^^^^^^^^
 
 
-We provide their statistics as follows.
-
-====================  ========  ==============  ==========  ==========  ==========
-Dataset               Events    Event Types     Sentences   Tokens      Documents
-====================  ========  ==============  ==========  ==========  ==========
-ACE2005               5,349     33              11,738      230,382     599
-MAVEN                 11,191    168             23,663      512,394     4,480
-TAC KBP               3,500     18              7,800       150,000     2,500
-CrisisLexT26          4,353     26              8,000       175,000     1,200
-CrisisLexT6           2,100     6               4,500       90,000      600
-Event2012             68,841    20              150,000     3,000,000   10,000
-Event2018             15,000    10              50,000      1,000,000   5,000
-KBP2017               4,200     22              9,000       180,000     3,000
-CySecED               5,500     35              12,000      250,000     4,200
-FewED                 6,000     40              14,000      300,000     5,500
-====================  ========  ==============  ==========  ==========  ==========
-
-
-
-How to Contribute
------------------
-
-You are welcome to become part of this project.
-See `contribution guide <https://github.com/pygod-team/pygod/blob/main/CONTRIBUTING.rst>`_ for more information.
+-   **Event2012**: Events2012 dataset contains 68,841 annotated English tweets covering 503 different event categories, encompassing tweets over a consecutive 29-day period.
+-   **Event2018**: Events2018 includes 64,516 annotated French tweets covering 257 different event categories, with data spanning over a consecutive 23-day period.
+-   **Arabic_Twitter**: Arabic-Twitter dataset comprises 9,070 annotated Arabic tweets, covering seven catastrophic-class events from various periods.
+-   **MAVEN**: MAVEN contains 10,242 annotated English texts covering 164 different event types. It is designed to facilitate the development of robust event detection models across a wide variety of domains.
+-   **CrisisLexT26**: CrisisLexT26 consists of 27,933 tweets related to 26 different crisis events. The dataset is used to study information dissemination and event detection in social media during emergencies.
+-   **CrisisLexT6**: CrisisLexT6 contains 60,082 tweets focused on 6 major crisis events. It provides valuable insights into public response and information spread during crises through annotated social media data.
+-   **CrisisMMD**: CrisisMMD includes 18,082 manually annotated tweets collected during 7 major natural disasters in 2017, including earthquakes, hurricanes, wildfires, and floods from different parts of the world.
+-   **CrisisNLP**: CrisisNLP comprises 25,976 crisis-related tweets covering 11 different events. The dataset includes human-labeled tweets, dictionaries, word embeddings and related tools for crisis information analysis.
+-   **HumAID**: HumAID contains 76,484 manually annotated tweets collected during 19 major natural disaster events from 2016 to 2019, including earthquakes, hurricanes, wildfires, and floods across different regions.
+-   **Mix_data**: A combined dataset containing:
+    - ICWSM2018: 21,571 human-labeled tweets from the 2015 Nepal earthquake and 2013 Queensland floods
+    - ISCRAM2013: 4,676 labeled tweets from the 2011 Joplin tornado
+    - ISCRAM2018: 49,804 tweets from Hurricanes Harvey, Irma, and Maria in 2017
+    - BigCrisisData: 2,438 tweets with crisis-related classifications
+-   **KBP**: KBP contains 85,569 texts covering 100 different event types. It focuses on extracting structured event information and serves as a benchmark dataset for information extraction systems.
+-   **Event2012_100**: Event2012_100 contains 100 events with a total of 15,019 tweets, where the maximal event comprises 2,377 tweets, and the minimally has 55 tweets, with an imbalance ratio of approximately 43.
+-   **Event2018_100**: Event2018_100 contains 100 events with a total of 19,944 tweets, where the maximal event comprises 4,189 tweets and the minimally has 27 tweets, an imbalance ratio of approximately 155.
+-   **Arabic_100**: Arabic_100 contains 100 events with a total of 3,022 tweets, where the maximal event comprises 312 tweets and the minimally has 7 tweets, with an imbalance ratio of approximately 44.
 
 
-Contact
--------
-Reach out to us by submitting an issue report or sending an email to sy2339225@buaa.edu.
+==================  ===============  ================  ============  ==============  =========================
+     Dataset        |      Subset    |    Long tail    |  Language   |    Events     |         Texts
+==================  ===============  ================  ============  ==============  =========================
+    Event2012       |               |       No        |   English   |     503       |        68,841
+    Event2018       |               |       No        |   French    |     257       |        64,516
+ Arabic_Twitter     |               |       No        |   Arabic    |      7        |         9,070
+     MAVEN          |               |       No        |   English   |     164       |        10,242
+  CrisisLexT26      |               |       No        |   English   |      26       |        27,933
+  CrisisLexT6       |               |       No        |   English   |       6       |        60,082
+   CrisisMMD        |               |       No        |   English   |       7       |        18,082
+   CrisisNLP        |               |       No        |   English   |      11       |        25,976
+    HumAID          |               |       No        |   English   |      19       |        76,484
+                    |   ICWSM2018   |       No        |   English   |       5       |        21,571
+   Mix_data         |   ISCRAM2013  |                 |   English   |               |        4,676
+                    |   ISCRAM2018  |                 |   English   |               |        49,804
+                    | BigCrisisData |                 |   English   |               |        2,438
+      KBP           |               |       No        |   English   |     100       |        85,569
+  Event2012_100     |               |      Yes        |   English   |     100       |        15,019
+  Event2018_100     |               |      Yes        |   French    |     100       |        19,944
+   Arabic_100       |               |      Yes        |   Arabic    |       7       |         3,022
+==================  ===============  ================  ============  ==============  =========================
+
+
+Library Design and Implementation
+-------------------------------
+
+Dependencies and Technology Stack
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+SocialED is compatible with Python 3.8 and above, and leverages well-established deep learning frameworks like PyTorch and Hugging Face Transformers for efficient model training and inference, supporting both CPU and GPU environments. In addition to these core frameworks, SocialED also integrates NumPy, SciPy, and scikit-learn for data manipulation, numerical operations, and machine learning tasks, ensuring versatility and performance across a range of workflows.
+
+Unified API Design
+^^^^^^^^^^^^^^^
+
+Inspired by the API designs of established frameworks, we developed a unified API for all detection algorithms in SocialED:
+
+1. ``preprocess`` provides a flexible framework for handling various preprocessing tasks, such as graph construction and tokenization
+2. ``fit`` trains the detection algorithms on the preprocessed data, adjusting model parameters and generating necessary statistics for predictions
+3. ``detection`` uses the trained model to identify events from the input data, returning the detected events
+
+Example Usage
+^^^^^^^^^^^^
+
+.. code-block:: python
+
+    from SocialED.dataset import MAVEN                 # Load the dataset
+    dataset = MAVEN().load_data()   # Load "arabic_twitter" dataset
+    
+    from SocialED.detector import KPGNN        # Import KPGNN model
+    args = args_define().args                  # Get training arguments
+    kpgnn = KPGNN(args, dataset)              # Initialize KPGNN model
+    
+    kpgnn.preprocess()                        # Preprocess data
+    kpgnn.fit()                               # Train the model
+    pres, trus = kpgnn.detection()            # Detect events
+    kpgnn.evaluate(pres, trus)                # Evaluate detection results
+
+Modular Design and Utility Functions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+SocialED is built with a modular design to improve reusability and reduce redundancy. It organizes social event detection into distinct modules:
+
+* ``preprocessing``
+* ``modeling``
+* ``evaluation``
+
+
+The library provides several utility functions including:
+
+* ``utils.tokenize_text`` and ``utils.construct_graph`` for data preprocessing
+* ``metric`` for evaluation metrics
+* ``utils.load_data`` for built-in datasets
+
+Library Robustness and Accessibility
+----------------------------------
+
+Quality and Reliability
+^^^^^^^^^^^^^^^^^^^^
+
+* Built with robustness and high-quality standards
+* Continuous integration through GitHub Actions
+* Automated testing across Python versions and operating systems
+* >99% code coverage
+* PyPI-compatible and PEP 625 compliant
+* Follows PEP 8 style guide
+
+Accessibility and Community Support
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* Detailed API documentation on Read the Docs
+* Step-by-step guides and tutorials
+* Intuitive API design inspired by scikit-learn
+* Open-source project hosted on GitHub
+* Easy issue-reporting mechanism
+* Clear contribution guidelines
+
+Future Development Plans
+----------------------
+
+1. **Expanding Algorithms and Datasets**
+   * Integrating advanced algorithms
+   * Expanding datasets across languages, fields, and cultures
+
+2. **Enhancing Intelligent Functions**
+   * Automated machine learning for model selection
+   * Hyperparameter optimization
+
+3. **Supporting Real-time Detection**
+   * Enhanced real-time event detection
+   * Trend analysis capabilities
+   * Support for streaming data
+
+
 
 
 References

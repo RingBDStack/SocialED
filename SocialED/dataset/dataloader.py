@@ -337,8 +337,8 @@ class KBP(DatasetLoader):
 
 if __name__ == "__main__":
     # Test MAVEN dataset
-    maven = MAVEN()
-    maven_df = maven.load_data()
+    #maven = MAVEN()
+    dataset = MAVEN().load_data()
     print("MAVEN dataset head:")
-    print(maven_df.head())
+    print(dataset.head())
     

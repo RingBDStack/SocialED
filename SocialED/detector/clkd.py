@@ -24,6 +24,8 @@ from collections import Counter
 import en_core_web_lg
 import fr_core_news_lg
 import sys
+import numpy as np
+
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from dataset.dataloader import DatasetLoader
@@ -140,103 +142,6 @@ class args_define:
         })
 
 
-# class args_define:
-#     parser = argparse.ArgumentParser()
-#     # Hyper parameters
-#     parser.add_argument('--n_epochs', default=n_epochs, type=int,
-#                         help="Number of initial-training/maintenance-training epochs.")
-#     parser.add_argument('--n_infer_epochs', default=0, type=int,
-#                         help="Number of inference epochs.")
-#     parser.add_argument('--window_size', default=3, type=int,
-#                         help="Maintain the model after predicting window_size blocks.")
-#     parser.add_argument('--patience', default=5, type=int,
-#                         help="Early stop if performance did not improve in the last patience epochs.")
-#     parser.add_argument('--margin', default=3., type=float,
-#                         help="Margin for computing triplet losses")
-#     parser.add_argument('--lr', default=1e-3, type=float,
-#                         help="Learning rate")
-#     parser.add_argument('--batch_size', default=2000, type=int,
-#                         help="Batch size (number of nodes sampled to compute triplet loss in each batch)")
-#     parser.add_argument('--n_neighbors', default=800, type=int,
-#                         help="Number of neighbors sampled for each node.")
-#     parser.add_argument('--word_embedding_dim', type=int, default=300)
-#     parser.add_argument('--hidden_dim', default=8, type=int,
-#                         help="Hidden dimension")
-#     parser.add_argument('--out_dim', default=32, type=int,
-#                         help="Output dimension of tweet representations")
-#     parser.add_argument('--num_heads', default=4, type=int,
-#                         help="Number of heads in each GAT layer")
-#     parser.add_argument('--use_residual', dest='use_residual', default=True,
-#                         action='store_false',
-#                         help="If true, add residual(skip) connections")
-#     parser.add_argument('--validation_percent', default=0.1, type=float,
-#                         help="Percentage of validation nodes(tweets)")
-#     parser.add_argument('--test_percent', default=0.2, type=float,
-#                         help="Percentage of test nodes(tweets)")
-#     parser.add_argument('--use_hardest_neg', dest='use_hardest_neg', default=False,
-#                         action='store_true',
-#                         help="If true, use hardest negative messages to form triplets. Otherwise use random ones")
-#     parser.add_argument('--metrics', type=str, default='ami')
-#     # Other arguments
-#     parser.add_argument('--use_cuda', dest='use_cuda', default=False,
-#                         action='store_true',
-#                         help="Use cuda")
-#     parser.add_argument('--gpuid', type=int, default=0)
-#     parser.add_argument('--mask_path', default=None,
-#                         type=str, help="File path that contains the training, validation and test masks")
-#     parser.add_argument('--log_interval', default=10, type=int,
-#                         help="Log interval")
-#     # offline or online situation
-#     parser.add_argument('--is_incremental', action='store_true', default=False,
-#                         help="static or incremental")
-#     # Teacher-Student structure or Mutual-Learning structure
-#     parser.add_argument('--mutual', action='store_true', default=False)
-#
-#     parser.add_argument('--mode', type=int, default=0)
-#     # mode==2, add linear cross-lingual knowledge ditillation; mode == 4, add non-linear cross-lingual knowledge transformation
-#     # mode==0, no knowledge distillation
-#     # mode==1,directly input student attribute features to teacher model
-#     parser.add_argument('--add_mapping', action='store_true', default=False)
-#     parser.add_argument('--data_path', default='../model/model_saved/clkd/English',
-#                         type=str, help="Path of features, labels and edges")
-#     parser.add_argument('--file_path', default='../model/model_saved/clkd',
-#                         type=str, help="default path to save the file")
-#     # offline situation Teacher-Student structure
-#     parser.add_argument('--Tmodel_path',
-#                         default='../model/model_saved/clkd/English/Tmodel/',
-#                         # '803_hash_static-8-English/0mode/embeddings_0227165510-0-English-nomap',
-#                         type=str,
-#                         help="File path that contains the pre-trained teacher model.")
-#     parser.add_argument('--lang', type=str, default="French")
-#     parser.add_argument('--Tealang', type=str, default='English')
-#     parser.add_argument('--t', type=int, default=1)
-#
-#     # Mutual-Learning structure
-#     parser.add_argument('--data_path1', default='../model/model_saved/clkd/English',
-#                         type=str, help="Path of features, labels and edges")
-#     parser.add_argument('--data_path2', default='../model/model_saved/clkd/French',
-#                         type=str, help="Path of features, labels and edges")
-#     parser.add_argument('--lang1', type=str, default="English")
-#     parser.add_argument('--lang2', type=str, default="French")
-#     parser.add_argument('--e', type=int, default=0)
-#     parser.add_argument('--mt', type=float, default=0.5)
-#     parser.add_argument('--rd', type=float, default=0.1)
-#
-#     # construct_graph
-#     parser.add_argument('--is_static', type=bool, default=False)
-#     parser.add_argument('--graph_lang', type=str, default='English')
-#     parser.add_argument('--tgtlang', type=str, default='French')
-#     parser.add_argument('--days', type=int, default=7)
-#
-#     # generate_initial_features
-#     parser.add_argument('--initial_lang', type=str, default='English')
-#     parser.add_argument('--TransLinear', type=bool, default=True)
-#     parser.add_argument('--TransNonlinear', type=bool, default=True)
-#     parser.add_argument('--tgt', type=str, default='French')
-#     parser.add_argument('--embpath', type=str, default='../model/model_saved/clkd/dictrans/fr-en-for.npy')
-#     parser.add_argument('--wordpath', type=str, default='../model/model_saved/clkd/dictrans/wordsFrench.txt')
-#
-#     args = parser.parse_args()
 
 
 # Inference(prediction)
@@ -921,7 +826,6 @@ def evaluate_model(extract_features, extract_labels, indices, epoch, num_isolate
 
 
 # metrics
-import numpy as np
 
 
 class Metric:
