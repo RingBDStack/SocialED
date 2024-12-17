@@ -190,29 +190,29 @@ Implemented Algorithms
 
 
 SocialED implements the following algorithms:
-==================  ===============  =======================  ============  ==============  =========================
-Algorithm           Year             Backbone                 scenario      Supervision     Ref
-==================  ===============  =======================  ============  ==============  =========================
-        LDA               2003             Topic              Offline       Unsupervised    [#Blei2003lda]_
-      BiLSTM              2005        Deep learning           Offline       Supervised      [#Graves2005bilstm]_
-     Word2Vec             2013        Word embeddings         Offline       Unsupervised    [#Mikolov2013word2vec]_
-       GloVe              2014        Word embeddings         Offline       Unsupervised    [#Pennington2014glove]_
-        WMD               2015          Similarity            Offline       Unsupervised    [#Kusner2015wmd]_
-       BERT               2018             PLMs               Offline       Unsupervised    [#Devlin2018bert]_
-      SBERT               2019             PLMs               Offline       Unsupervised    [#Reimers2019sbert]_
-      EventX              2020        Community detection     Offline       Unsupervised    [#Liu2020eventx]_
-       CLKD               2021             GNNs               Online        Supervised      [#Ren2021clkd]_
-      KPGNN               2021             GNNs               Online        Supervised      [#Cao2021kpgnn]_
-     FinEvent             2022             GNNs               Online        Supervised      [#Peng2022finevent]_
-      QSGNN               2022             GNNs               Online        Supervised      [#Ren2022qsgnn]_
-      ETGNN               2023             GNNs               Offline       Supervised      [#Ren2023etgnn]_
-       HCRC               2023             GNNs               Online        Unsupervised    [#Guo2023hcrc]_
-      UCLSED              2023             GNNs               Offline       Supervised      [#Ren2023uclsad]_
-     RPLMSED              2024             PLMs               Online        Supervised      [#Li2024rplmsed]_
-     HISEvent             2024        Community detection     Online        Unsupervised    [#Cao2024hisevent]_
-   ADPSEMEvent            2024        Community detection     Online        Unsupervised    [#Yang2024adpsemevent]_
-     HyperSED             2025        Community detection     Online        Unsupervised    [#Yu2025hypersed]_
-==================  ===============  =======================  ============  ==============  =========================
+===================  ==================  ===============  =============  ============  =========================
+Algorithm            Year                Backbone         Scenario       Supervision  Ref
+===================  ==================  ===============  =============  ============  =========================
+LDA                  2003                Topic            Offline        Unsupervised  [#Blei2003lda]_
+BiLSTM               2005                Deep learning    Offline        Supervised    [#Graves2005bilstm]_
+Word2Vec             2013                Word embeddings  Offline        Unsupervised  [#Mikolov2013word2vec]_
+GloVe                2014                Word embeddings  Offline        Unsupervised  [#Pennington2014glove]_
+WMD                  2015                Similarity       Offline        Unsupervised  [#Kusner2015wmd]_
+BERT                 2018                PLMs             Offline        Unsupervised  [#Devlin2018bert]_
+SBERT                2019                PLMs             Offline        Unsupervised  [#Reimers2019sbert]_
+EventX               2020                Community        Offline        Unsupervised  [#Liu2020eventx]_
+CLKD                 2021                GNNs             Online         Supervised    [#Ren2021clkd]_
+KPGNN                2021                GNNs             Online         Supervised    [#Cao2021kpgnn]_
+FinEvent             2022                GNNs             Online         Supervised    [#Peng2022finevent]_
+QSGNN                2022                GNNs             Online         Supervised    [#Ren2022qsgnn]_
+ETGNN                2023                GNNs             Offline        Supervised    [#Ren2023etgnn]_
+HCRC                 2023                GNNs             Online         Unsupervised  [#Guo2023hcrc]_
+UCLSED               2023                GNNs             Offline        Supervised    [#Ren2023uclsad]_
+RPLMSED              2024                PLMs             Online         Supervised    [#Li2024rplmsed]_
+HISEvent             2024                Community        Online         Unsupervised  [#Cao2024hisevent]_
+ADPSEMEvent          2024                Community        Online         Unsupervised  [#Yang2024adpsemevent]_
+HyperSED             2025                Community        Online         Unsupervised  [#Yu2025hypersed]_
+===================  ==================  ===============  =============  ============  =========================
 
 
 
