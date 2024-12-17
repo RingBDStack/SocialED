@@ -190,6 +190,8 @@ Implemented Algorithms
 
 
 SocialED implements the following algorithms:
+
+
 ===================  ==================  ===============  =============  ============  =========================
 Algorithm            Year                Backbone         Scenario       Supervision   Ref
 ===================  ==================  ===============  =============  ============  =========================

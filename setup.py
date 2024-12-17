@@ -8,7 +8,7 @@ setup(
     version='1.0.3',
     packages=find_packages(),
     author='beici',
-    author_email='SY2339225@buaa.edu.cn',
+    author_email='zhangkun23@buaa.edu.cn',
     description='A Python Library for Social Event Detection',
     install_requires=requirements,
     include_package_data=True,
