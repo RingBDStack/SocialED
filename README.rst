@@ -191,7 +191,7 @@ Implemented Algorithms
 
 SocialED implements the following algorithms:
 ===================  ==================  ===============  =============  ============  =========================
-Algorithm            Year                Backbone         Scenario       Supervision  Ref
+Algorithm            Year                Backbone         Scenario       Supervision   Ref
 ===================  ==================  ===============  =============  ============  =========================
 LDA                  2003                Topic            Offline        Unsupervised  [#Blei2003lda]_
 BiLSTM               2005                Deep learning    Offline        Supervised    [#Graves2005bilstm]_
