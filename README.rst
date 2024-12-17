@@ -111,6 +111,8 @@ Folder Structure
    │   ├── __init__.py
    │   ├── datasets    
    │   ├── detector  
+   │   ├── utils
+   │   ├── tests
    │   └── metrics  
    ├── requirements.txt
    ├── setup.cfg
@@ -188,29 +190,29 @@ Implemented Algorithms
 
 
 SocialED implements the following algorithms:
-==================  ===============  ================    ============  ==============  =========================
-     Algorithm      |      Year      |    Category       |  Environment  |  Supervision   |            Ref
-==================  ===============  ================    ============  ==============  =========================
-        LDA         |      2003      |       Topic       |    Offline    | Unsupervised    |  [#Blei2003lda]_
-      BiLSTM        |      2005      |  Deep learning    |    Offline    | Unsupervised    |  [#Graves2005bilstm]_
-     Word2Vec       |      2013      | Word embeddings   |    Offline    | Unsupervised    |  [#Mikolov2013word2vec]_
-       GloVe        |      2014      | Word embeddings   |    Offline    | Unsupervised    |  [#Pennington2014glove]_
-        WMD         |      2015      |    Similarity     |    Offline    | Unsupervised    |  [#Kusner2015wmd]_
-       BERT         |      2018      |       PLMs        |    Offline    | Unsupervised    |  [#Devlin2018bert]_
-      SBERT         |      2019      |       PLMs        |    Offline    | Unsupervised    |  [#Reimers2019sbert]_
-      EventX        |      2020      | Community detection |  Offline    | Unsupervised    |  [#Liu2020eventx]_
-       CLKD         |      2021      |       GNNs        |    Online     |   Supervised    |  [#Ren2021clkd]_
-      KPGNN         |      2021      |       GNNs        |    Online     |   Supervised    |  [#Cao2021kpgnn]_
-     FinEvent       |      2022      |       GNNs        |    Online     |   Supervised    |  [#Peng2022finevent]_
-      QSGNN         |      2022      |       GNNs        |    Online     |   Supervised    |  [#Ren2022qsgnn]_
-      ETGNN         |      2023      |       GNNs        |    Offline    | Unsupervised    |  [#Ren2023etgnn]_
-       HCRC         |      2023      |       GNNs        |    Online     | Unsupervised    |  [#Guo2023hcrc]_
-      UCLSED        |      2023      |       GNNs        |    Offline    | Unsupervised    |  [#Ren2023uclsad]_
-     RPLMSED        |      2024      |       PLMs        |    Online     |   Supervised    |  [#Li2024rplmsed]_
-     HISEvent       |      2024      | Community detection |  Online     | Unsupervised    |  [#Cao2024hisevent]_
-   ADPSEMEvent      |      2024      | Community detection |  Online     | Unsupervised    |  [#Yang2024adpsemevent]_
-     HyperSED       |      2025      | Community detection |  Online     | Unsupervised    |  [#Yu2025hypersed]_
-==================  ===============  ================  ============  ==============  =========================
+==================  ===============  =======================  ============  ==============  =========================
+     Algorithm      |      Year      |       Backbone      |     scenario |  Supervision  |            Ref
+==================  ===============  =======================  ============  ==============  =========================
+        LDA         |      2003      |       Topic         |    Offline   | Unsupervised  |  [#Blei2003lda]_
+      BiLSTM        |      2005      |  Deep learning      |    Offline   |   Supervised  |  [#Graves2005bilstm]_
+     Word2Vec       |      2013      | Word embeddings     |    Offline   | Unsupervised  |  [#Mikolov2013word2vec]_
+       GloVe        |      2014      | Word embeddings     |    Offline   | Unsupervised  |  [#Pennington2014glove]_
+        WMD         |      2015      |    Similarity       |    Offline   | Unsupervised  |  [#Kusner2015wmd]_
+       BERT         |      2018      |       PLMs          |    Offline   | Unsupervised  |  [#Devlin2018bert]_
+      SBERT         |      2019      |       PLMs          |    Offline   | Unsupervised  |  [#Reimers2019sbert]_
+      EventX        |      2020      | Community detection |    Offline   | Unsupervised  |  [#Liu2020eventx]_
+       CLKD         |      2021      |       GNNs          |    Online    |   Supervised  |  [#Ren2021clkd]_
+      KPGNN         |      2021      |       GNNs          |    Online    |   Supervised  |  [#Cao2021kpgnn]_
+     FinEvent       |      2022      |       GNNs          |    Online    |   Supervised  |  [#Peng2022finevent]_
+      QSGNN         |      2022      |       GNNs          |    Online    |   Supervised  |  [#Ren2022qsgnn]_
+      ETGNN         |      2023      |       GNNs          |    Offline   |   Supervised  |  [#Ren2023etgnn]_
+       HCRC         |      2023      |       GNNs          |    Online    | Unsupervised  |  [#Guo2023hcrc]_
+      UCLSED        |      2023      |       GNNs          |    Offline   |   Supervised  |  [#Ren2023uclsad]_
+     RPLMSED        |      2024      |       PLMs          |    Online    |   Supervised  |  [#Li2024rplmsed]_
+     HISEvent       |      2024      | Community detection |    Online    | Unsupervised  |  [#Cao2024hisevent]_
+   ADPSEMEvent      |      2024      | Community detection |    Online    | Unsupervised  |  [#Yang2024adpsemevent]_
+     HyperSED       |      2025      | Community detection |    Online    | Unsupervised  |  [#Yu2025hypersed]_
+==================  ===============  =======================  ============  ==============  =========================
 
 
 
@@ -236,33 +238,30 @@ Supported Datasets
 -   **KBP**: KBP contains 85,569 texts covering 100 different event types. It focuses on extracting structured event information and serves as a benchmark dataset for information extraction systems.
 -   **Event2012_100**: Event2012_100 contains 100 events with a total of 15,019 tweets, where the maximal event comprises 2,377 tweets, and the minimally has 55 tweets, with an imbalance ratio of approximately 43.
 -   **Event2018_100**: Event2018_100 contains 100 events with a total of 19,944 tweets, where the maximal event comprises 4,189 tweets and the minimally has 27 tweets, an imbalance ratio of approximately 155.
--   **Arabic_100**: Arabic_100 contains 100 events with a total of 3,022 tweets, where the maximal event comprises 312 tweets and the minimally has 7 tweets, with an imbalance ratio of approximately 44.
+-   **Arabic_7**: Arabic_7 contains 100 events with a total of 3,022 tweets, where the maximal event comprises 312 tweets and the minimally has 7 tweets, with an imbalance ratio of approximately 44.
 
 
 Dataset
 -------
 
-===================  ==================  ======================================  =============  ==============  =============
-Dataset              Subset              Long tail                               Language       Events          Texts
-===================  ==================  ======================================  =============  ==============  =============
-Event2012                                No                                      English        503             68,841
-Event2018                                No                                      French         257             64,516
-Arabic_Twitter                           No                                      Arabic         7               9,070
-MAVEN                                    No                                      English        164             10,242
-CrisisLexT26                             No                                      English        26              27,933
-CrisisLexT6                              No                                      English        6               60,082
-CrisisMMD                                No                                      English        7               18,082
-CrisisNLP                                No                                      English        11              25,976
-HumAID                                   No                                      English        19              76,484
-Mix_data             ICWSM2018           No                                      English        5               21,571
-                     ISCRAM2013                                                  English                        4,676
-                     ISCRAM2018                                                  English                        49,804
-                     BigCrisisData                                               English                        2,438
-KBP                                      No                                      English        100             85,569
-Event2012_100                            Yes                                     English        100             15,019
-Event2018_100                            Yes                                     French         100             19,944
-Arabic_100                               Yes                                     Arabic         7               3,022
-===================  ==================  ======================================  =============  ==============  =============
+===================  =============  ==============  =============  ===========
+Dataset              Language       Events          Texts          Long tail
+===================  =============  ==============  =============  ===========
+Event2012            English        503             68,841         No
+Event2018            French         257             64,516         No
+Arabic_Twitter       Arabic         7               9,070          No
+MAVEN                English        164             10,242         No
+CrisisLexT26         English        26              27,933         No
+CrisisLexT6          English        6               60,082         No
+CrisisMMD            English        7               18,082         No
+CrisisNLP            English        11              25,976         No
+HumAID               English        19              76,484         No
+Mix_Data             English        5               78,489         No
+KBP                  English        100             85,569         No
+Event2012_100        English        100             15,019         Yes
+Event2018_100        French         100             19,944         Yes
+Arabic_7             Arabic         7               3,022          Yes
+===================  =============  ==============  =============  ===========
 
 
 Library Design and Implementation
