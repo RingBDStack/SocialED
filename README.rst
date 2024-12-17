@@ -38,8 +38,8 @@
    :target: https://github.com/RingBDStack/SocialED/blob/master/LICENSE
    :alt: License
 
-.. |badge_codeql| image:: https://github.com/ChenBeici/SocialED/actions/workflows/codeql.yml/badge.svg
-   :target: https://github.com/ChenBeici/SocialED/actions/workflows/codeql.yml
+.. |badge_codeql| image:: https://github.com/RingBDStack/SocialED/actions/workflows/codeql.yml/badge.svg
+   :target: https://github.com/RingBDStack/SocialED/actions/workflows/codeql.yml
    :alt: CodeQL
 
 -----
