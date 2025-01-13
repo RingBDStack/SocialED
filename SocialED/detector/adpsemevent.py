@@ -509,9 +509,9 @@ def search_stable_points(embeddings, epsilon, path, max_num_neighbors = 200):
         index = stable_indices[stable_SEs.index(min(stable_SEs))]
         print('stable_indices: ', stable_indices)
         print('stable_SEs: ', stable_SEs)
-        print('First stable point: k = ', stable_indices[0]+1, ', correspoding 1dSE: ', stable_SEs[0]) # n_neighbors should be index + 1
+        print('First stable point: k = ', stable_indices[0]+1, ', corresponding 1dSE: ', stable_SEs[0]) # n_neighbors should be index + 1
         print('Global stable point within the searching range: k = ', index + 1, \
-            ', correspoding 1dSE: ', all_1dSEs[index]) # n_neighbors should be index + 1
+            ', corresponding 1dSE: ', all_1dSEs[index]) # n_neighbors should be index + 1
 
     return stable_indices[0]+1, index + 1, s # first stable point, global stable point
 
