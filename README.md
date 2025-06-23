@@ -360,15 +360,17 @@ The library provides several utility functions including:
 ## 📊 Citation
 
 ```bibtex
-@misc{zhang2024socialedpythonlibrarysocial,
-      title={SocialED: A Python Library for Social Event Detection}, 
-      author={Kun Zhang and Xiaoyan Yu and Pu Li and Hao Peng and Philip S. Yu},
-      year={2024},
-      eprint={2412.13472},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG},
-      url={https://arxiv.org/abs/2412.13472}, 
+@inproceedings{zhang2025socialed,
+  author    = {Kun Zhang and Xiaoyan Yu and Pu Li and Hao Peng and Philip S. Yu},
+  title     = {SocialED: A Python Library for Social Event Detection},
+  booktitle = {Proceedings of the 2025 Asia Pacific Web and Web-Age Information Management Joint International Conference},
+  publisher = {Springer}, 
+  year      = {2025},
+  pages     = {xx--yy}, 
+  doi       = {10.1007/xxxxx},
+  url       = {https://doi.org/10.1007/xxxxx} 
 }
+
 ```
 
 ## 📚 References
