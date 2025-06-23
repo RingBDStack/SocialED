@@ -365,10 +365,7 @@ The library provides several utility functions including:
   title     = {SocialED: A Python Library for Social Event Detection},
   booktitle = {Proceedings of the 2025 Asia Pacific Web and Web-Age Information Management Joint International Conference},
   publisher = {Springer}, 
-  year      = {2025},
-  pages     = {xx--yy}, 
-  doi       = {10.1007/xxxxx},
-  url       = {https://doi.org/10.1007/xxxxx} 
+  year      = {2025}
 }
 
 ```
