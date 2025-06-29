@@ -335,26 +335,6 @@ The library provides several utility functions including:
    * Trend analysis capabilities
    * Support for streaming data
 
-## 👥 Contributors
-
-### 🌟 Core Team
-
-<div align="center">
-<h3>🌟 Core Team</h3>
-
-| Name | Affiliation | Contact |
-|:---:|:---:|:---:|
-| **Kun Zhang** | 🎓 Beihang University | 📧 zhangkun23@buaa.edu.cn |
-| **Xiaoyan Yu** | 🎓 Beijing Institute of Technology | 📧 xiaoyan.yu@bit.edu.cn |
-| **Pu Li** | 🎓 Kunming University of Science and Technology | 📧 lip@stu.kust.edu.cn |
-| **Ye Tian** | 🎓 Laboratory for Advanced Computing<br>and Intelligence Engineering | 📧 sweetwild@mail.ustc.edu.cn |
-| **ZhiLin Xu** | 🎓 Beihang University | 📧 21377240@buaa.edu.cn |
-| **Kaiwei Yang** | 🎓 Beihang University | 📧 yangkw@buaa.edu.cn |
-| **Hao Peng** 📍<br>*Corresponding Author* | 🎓 Beihang University | 📧 penghao@buaa.edu.cn |
-| **Philip S. Yu** | 🎓 University of Illinois at Chicago | 📧 psyu@uic.edu |
-
-</div>
-
 
 
 ## 📊 Citation
@@ -370,42 +350,3 @@ The library provides several utility functions including:
 
 ```
 
-## 📚 References
-
-* D.M. Blei, A.Y. Ng, and M.I. Jordan. Latent Dirichlet allocation. Journal of Machine Learning Research, 3(Jan):993-1022, 2003.
-
-* A. Graves and J. Schmidhuber. Framewise phoneme classification with bidirectional LSTM and other neural network architectures. Neural Networks, 18(5-6):602-610, 2005.
-
-* T. Mikolov, K. Chen, G. Corrado, and J. Dean. Efficient estimation of word representations in vector space. In International Conference on Learning Representations, pages 1-12, 2013.
-
-* J. Pennington, R. Socher, and C.D. Manning. GloVe: Global Vectors for Word Representation. In Proceedings of EMNLP, pages 1532-1543, 2014.
-
-* M. Kusner, Y. Sun, N. Kolkin, and K. Weinberger. From word embeddings to document distances. In International Conference on Machine Learning, pages 957-966, 2015.
-
-* J. Devlin, M.W. Chang, K. Lee, and K. Toutanova. BERT: Pre-training of deep bidirectional transformers for language understanding. In Proceedings of NAACL-HLT, pages 4171-4186, 2019.
-
-* N. Reimers and I. Gurevych. Sentence-BERT: Sentence embeddings using Siamese BERT-networks. In Proceedings of EMNLP-IJCNLP, pages 3980-3990, 2019.
-
-* B. Liu, F.X. Han, D. Niu, L. Kong, K. Lai, and Y. Xu. Story forest: Extracting events and telling stories from breaking news. ACM Transactions on Knowledge Discovery from Data, 14(3):1-28, 2020.
-
-* J. Ren, H. Peng, L. Jiang, Z. Liu, J. Wu, and P.S. Yu. Toward cross-lingual social event detection with hybrid knowledge distillation. ACM Transactions on Knowledge Discovery from Data, 18(9):1-36, 2024.
-
-* Y. Cao, H. Peng, J. Wu, Y. Dou, J. Li, and P.S. Yu. Knowledge-preserving incremental social event detection via heterogeneous GNNs. In Proceedings of The Web Conference, pages 3383-3395, 2021.
-
-* H. Peng, R. Zhang, S. Li, et al. Reinforced, incremental and cross-lingual event detection from social messages. IEEE Transactions on Pattern Analysis and Machine Intelligence, 45(1):980-998, 2022.
-
-* J. Ren, L. Jiang, H. Peng, Y. Cao, J. Wu, P.S. Yu, and L. He. From known to unknown: Quality-aware self-improving graph neural network for open set social event detection. In Proceedings of CIKM, pages 1696-1705, 2022.
-
-* J. Ren, L. Jiang, H. Peng, Z. Liu, J. Wu, and P.S. Yu. Evidential temporal-aware graph-based social event detection via Dempster-Shafer theory. In IEEE ICWS, pages 331-336, 2022.
-
-* Y. Guo, Z. Zang, H. Gao, X. Xu, R. Wang, L. Liu, and J. Li. Unsupervised social event detection via hybrid graph contrastive learning and reinforced incremental clustering. Knowledge-Based Systems, 284:111225, 2024.
-
-* J. Ren, L. Jiang, H. Peng, Z. Liu, J. Wu, and P.S. Yu. Uncertainty-guided boundary learning for imbalanced social event detection. IEEE Transactions on Knowledge and Data Engineering, 2023.
-
-* P. Li, X. Yu, H. Peng, Y. Xian, L. Wang, L. Sun, J. Zhang, and P.S. Yu. Relational prompt-based pre-trained language models for social event detection. ACM Transactions on Information Systems, 43(1):1-43, 2024.
-
-* Y. Cao, H. Peng, Z. Yu, and P.S. Yu. Hierarchical and incremental structural entropy minimization for unsupervised social event detection. In Proceedings of AAAI, 38(8):8255-8264, 2024.
-
-* Z. Yang, Y. Wei, H. Li, et al. Adaptive Differentially Private Structural Entropy Minimization for Unsupervised Social Event Detection. In Proceedings of CIKM, pages 2950-2960, 2024.
-
-* X. Yu, Y. Wei, S. Zhou, Z. Yang, L. Sun, H. Peng, L. Zhu, and P.S. Yu. Towards effective, efficient and unsupervised social event detection in the hyperbolic space. In Proceedings of AAAI, 2025.
