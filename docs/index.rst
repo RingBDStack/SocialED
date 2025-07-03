@@ -149,6 +149,8 @@ ETGNN                2023                GNNs             Offline        Supervi
 HCRC                 2023                GNNs             Online         Unsupervised  :class:`SocialED.detector.HCRC`
 UCLSED               2023                GNNs             Offline        Supervised    :class:`SocialED.detector.UCLSED`
 RPLMSED              2024                PLMs             Online         Supervised    :class:`SocialED.detector.RPLMSED`
+PromptSED            2025                PLMs             Online         Supervised    :class:`SocialED.detector.PromptSED`
+DAMe                 2024                GNNs             Online         Supervised    :class:`SocialED.detector.DAMe`
 HISEvent             2024                Community        Online         Unsupervised  :class:`SocialED.detector.HISEvent`
 ADPSEMEvent          2024                Community        Online         Unsupervised  :class:`SocialED.detector.ADPSEMEvent`
 HyperSED             2025                Community        Online         Unsupervised  :class:`SocialED.detector.HyperSED`
