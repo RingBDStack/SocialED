@@ -56,7 +56,7 @@ SocialED is your all-in-one Python toolkit for Social Event Detection that offer
 - **🛠️ Rich Utility Functions**: Offers tools designed to simplify the construction of social event detection workflows
 - **✨ Robust Implementation**: Includes comprehensive documentation, examples, unit tests, and maintainability features
 
-SocialED includes **21** social event detection algorithms.
+SocialED includes **19** social event detection algorithms.
 For consistency and accessibility, SocialED is developed on top of [DGL](https://www.dgl.ai/) 
 and [PyTorch](https://pytorch.org/), and follows the API design of [PyOD](https://github.com/yzhao062/pyod)
 and [PyGOD](https://github.com/pygod-team/pygod).
