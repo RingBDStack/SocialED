@@ -16,8 +16,6 @@ from .hcrc import HCRC
 from .etgnn import ETGNN
 from .uclsed import UCLSED
 from .rplmsed import RPLMSED
-from .promptsed import PromptSED
-from .dame import DAMe
 from .hisevent import HISEvent
 from .adpsemevent import ADPSEMEvent
 from .hypersed import HyperSED
@@ -39,8 +37,6 @@ __all__ = [
     "ETGNN",
     "UCLSED",
     "RPLMSED",
-    "PromptSED",
-    "DAMe",
     "HISEvent", #test160s
     "ADPSEMEvent", #test160s
     "HyperSED"  

@@ -1,3 +1,206 @@
+Metadata-Version: 2.1
+Name: SocialED
+Version: 1.1.6
+Summary: A Python Library for Social Event Detection
+Home-page: https://github.com/RingBDStack/SocialED
+Author: beici
+Author-email: zhangkun23@buaa.edu.cn
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: accelerate==0.28.0
+Requires-Dist: aiohttp==3.9.5
+Requires-Dist: aiosignal==1.3.1
+Requires-Dist: alabaster==0.7.13
+Requires-Dist: annotated-types==0.6.0
+Requires-Dist: anyio==4.3.0
+Requires-Dist: async-timeout==4.0.3
+Requires-Dist: attrs==23.2.0
+Requires-Dist: Babel==2.15.0
+Requires-Dist: backports.tarfile==1.2.0
+Requires-Dist: beautifulsoup4==4.12.3
+Requires-Dist: bitsandbytes==0.42.0
+Requires-Dist: blis==0.7.11
+Requires-Dist: catalogue==2.0.10
+Requires-Dist: certifi==2024.2.2
+Requires-Dist: cffi==1.17.0
+Requires-Dist: charset-normalizer==3.3.2
+Requires-Dist: click==8.1.7
+Requires-Dist: cloudpathlib==0.16.0
+Requires-Dist: cmake==3.28.4
+Requires-Dist: commonmark==0.9.1
+Requires-Dist: confection==0.1.4
+Requires-Dist: contourpy==1.1.1
+Requires-Dist: coverage==7.6.1
+Requires-Dist: coveralls==4.0.1
+Requires-Dist: cryptography==43.0.0
+Requires-Dist: cycler==0.12.1
+Requires-Dist: cymem==2.0.8
+Requires-Dist: Cython==0.29.37
+Requires-Dist: datasets==3.0.1
+Requires-Dist: decorator==5.1.1
+Requires-Dist: dgl==0.6.0
+Requires-Dist: dgl-cu110==0.6.1
+Requires-Dist: dill==0.3.8
+Requires-Dist: docopt==0.6.2
+Requires-Dist: docutils==0.20.1
+Requires-Dist: exceptiongroup==1.2.0
+Requires-Dist: faiss-gpu==1.7.2
+Requires-Dist: fastapi==0.110.0
+Requires-Dist: filelock==3.16.1
+Requires-Dist: fonttools==4.53.1
+Requires-Dist: frozenlist==1.4.1
+Requires-Dist: fsspec==2024.3.1
+Requires-Dist: furo==2024.8.6
+Requires-Dist: gensim==4.3.2
+Requires-Dist: geoopt==0.5.0
+Requires-Dist: gitdb==4.0.11
+Requires-Dist: GitPython==3.1.43
+Requires-Dist: h11==0.14.0
+Requires-Dist: hdbscan==0.8.36
+Requires-Dist: huggingface-hub==0.25.1
+Requires-Dist: idna==3.7
+Requires-Dist: ignite==1.1.0
+Requires-Dist: imagesize==1.4.1
+Requires-Dist: importlib_metadata==8.2.0
+Requires-Dist: importlib_resources==6.4.0
+Requires-Dist: iniconfig==2.0.0
+Requires-Dist: jaraco.classes==3.4.0
+Requires-Dist: jaraco.context==5.3.0
+Requires-Dist: jaraco.functools==4.0.2
+Requires-Dist: jeepney==0.8.0
+Requires-Dist: Jinja2==3.1.3
+Requires-Dist: joblib==1.4.2
+Requires-Dist: keyring==25.3.0
+Requires-Dist: kiwisolver==1.4.5
+Requires-Dist: langcodes==3.4.0
+Requires-Dist: language_data==1.2.0
+Requires-Dist: latexcodec==3.0.0
+Requires-Dist: lit==18.1.2
+Requires-Dist: marisa-trie==1.1.1
+Requires-Dist: markdown-it-py==3.0.0
+Requires-Dist: MarkupSafe==2.1.5
+Requires-Dist: matplotlib==3.7.5
+Requires-Dist: mdurl==0.1.2
+Requires-Dist: more-itertools==10.4.0
+Requires-Dist: mpmath==1.3.0
+Requires-Dist: multidict==6.0.5
+Requires-Dist: multiprocess==0.70.16
+Requires-Dist: munkres==1.1.4
+Requires-Dist: murmurhash==1.0.10
+Requires-Dist: networkx==3.1
+Requires-Dist: nh3==0.2.18
+Requires-Dist: numpy==1.24.4
+Requires-Dist: nvidia-cublas-cu11==11.10.3.66
+Requires-Dist: nvidia-cublas-cu12==12.1.3.1
+Requires-Dist: nvidia-cuda-cupti-cu11==11.7.101
+Requires-Dist: nvidia-cuda-cupti-cu12==12.1.105
+Requires-Dist: nvidia-cuda-nvrtc-cu11==11.7.99
+Requires-Dist: nvidia-cuda-nvrtc-cu12==12.1.105
+Requires-Dist: nvidia-cuda-runtime-cu11==11.7.99
+Requires-Dist: nvidia-cuda-runtime-cu12==12.1.105
+Requires-Dist: nvidia-cudnn-cu11==8.5.0.96
+Requires-Dist: nvidia-cudnn-cu12==8.9.2.26
+Requires-Dist: nvidia-cufft-cu11==10.9.0.58
+Requires-Dist: nvidia-cufft-cu12==11.0.2.54
+Requires-Dist: nvidia-curand-cu11==10.2.10.91
+Requires-Dist: nvidia-curand-cu12==10.3.2.106
+Requires-Dist: nvidia-cusolver-cu11==11.4.0.1
+Requires-Dist: nvidia-cusolver-cu12==11.4.5.107
+Requires-Dist: nvidia-cusparse-cu11==11.7.4.91
+Requires-Dist: nvidia-cusparse-cu12==12.1.0.106
+Requires-Dist: nvidia-nccl-cu11==2.14.3
+Requires-Dist: nvidia-nccl-cu12==2.20.5
+Requires-Dist: nvidia-nvjitlink-cu12==12.4.127
+Requires-Dist: nvidia-nvtx-cu11==11.7.91
+Requires-Dist: nvidia-nvtx-cu12==12.1.105
+Requires-Dist: packaging==24.1
+Requires-Dist: pandas==2.0.3
+Requires-Dist: peft==0.3.0
+Requires-Dist: pillow==10.3.0
+Requires-Dist: pkginfo==1.10.0
+Requires-Dist: pluggy==1.5.0
+Requires-Dist: POT==0.9.4
+Requires-Dist: preshed==3.0.9
+Requires-Dist: psutil==5.9.8
+Requires-Dist: pyarrow==16.1.0
+Requires-Dist: pyarrow-hotfix==0.6
+Requires-Dist: pybtex==0.24.0
+Requires-Dist: pybtex-docutils==1.0.3
+Requires-Dist: pycparser==2.22
+Requires-Dist: pydantic==2.6.4
+Requires-Dist: pydantic_core==2.16.3
+Requires-Dist: Pygments==2.18.0
+Requires-Dist: pyparsing==3.1.2
+Requires-Dist: pytest==8.3.2
+Requires-Dist: pytest-cov==5.0.0
+Requires-Dist: python-dateutil==2.9.0.post0
+Requires-Dist: pytorch-ignite==0.5.0.post2
+Requires-Dist: pytz==2024.1
+Requires-Dist: PyYAML==6.0.1
+Requires-Dist: readme_renderer==43.0
+Requires-Dist: recommonmark==0.7.1
+Requires-Dist: regex==2023.12.25
+Requires-Dist: requests==2.32.3
+Requires-Dist: requests-toolbelt==1.0.0
+Requires-Dist: rfc3986==2.0.0
+Requires-Dist: rich==13.7.1
+Requires-Dist: safetensors==0.4.2
+Requires-Dist: scikit-learn==1.3.2
+Requires-Dist: scipy==1.10.1
+Requires-Dist: SecretStorage==3.3.3
+Requires-Dist: sentence-transformers==3.0.1
+Requires-Dist: six==1.16.0
+Requires-Dist: smart-open==6.4.0
+Requires-Dist: smmap==5.0.1
+Requires-Dist: sniffio==1.3.1
+Requires-Dist: snowballstemmer==2.2.0
+Requires-Dist: SocialED==1.1.2
+Requires-Dist: soupsieve==2.5
+Requires-Dist: spacy==3.7.4
+Requires-Dist: spacy-legacy==3.0.12
+Requires-Dist: spacy-loggers==1.0.5
+Requires-Dist: Sphinx==7.1.2
+Requires-Dist: sphinx-autodoc-typehints==2.0.1
+Requires-Dist: sphinx-basic-ng==1.0.0b2
+Requires-Dist: sphinx-gallery==0.17.1
+Requires-Dist: sphinx-rtd-theme==2.0.0
+Requires-Dist: sphinxcontrib-applehelp==1.0.4
+Requires-Dist: sphinxcontrib-bibtex==2.6.2
+Requires-Dist: sphinxcontrib-devhelp==1.0.2
+Requires-Dist: sphinxcontrib-htmlhelp==2.0.1
+Requires-Dist: sphinxcontrib-jquery==4.1
+Requires-Dist: sphinxcontrib-jsmath==1.0.1
+Requires-Dist: sphinxcontrib-qthelp==1.0.3
+Requires-Dist: sphinxcontrib-serializinghtml==1.1.5
+Requires-Dist: srsly==2.4.8
+Requires-Dist: starlette==0.36.3
+Requires-Dist: sympy==1.12
+Requires-Dist: thinc==8.2.3
+Requires-Dist: threadpoolctl==3.5.0
+Requires-Dist: tokenizers==0.19.1
+Requires-Dist: tomli==2.0.1
+Requires-Dist: torch==2.3.1
+Requires-Dist: torch-geometric==2.6.1
+Requires-Dist: tqdm==4.66.4
+Requires-Dist: transformers==4.41.2
+Requires-Dist: triton==2.3.1
+Requires-Dist: twine==5.1.1
+Requires-Dist: typer==0.9.4
+Requires-Dist: typing_extensions==4.11.0
+Requires-Dist: tzdata==2024.1
+Requires-Dist: urllib3==2.2.1
+Requires-Dist: uvicorn==0.29.0
+Requires-Dist: wasabi==1.1.2
+Requires-Dist: weasel==0.3.4
+Requires-Dist: wrapt==1.16.0
+Requires-Dist: xxhash==3.4.1
+Requires-Dist: yarl==1.9.4
+Requires-Dist: zipp==3.19.2
+
 ![SocialED Logo](https://github.com/RingBDStack/SocialED/blob/main/docs/SocialED.png?raw=true)
 <div align="center">
 
@@ -34,7 +237,7 @@ Social Event Detection (SED) is a cutting-edge research area in AI and NLP that 
 SocialED is your all-in-one Python toolkit for Social Event Detection that offers:
 
 ### 📊 Rich Resources
-- 19 detection algorithms
+- 21 detection algorithms
 - 15 diverse datasets
 - Unified API with detailed documentation
 
@@ -50,7 +253,7 @@ SocialED is your all-in-one Python toolkit for Social Event Detection that offer
 
 ## ⭐ Key Features
 
-- **🤖 Comprehensive Algorithm Collection**: Integrates 19 detection algorithms and supports 15 widely-used datasets, with continuous updates to include emerging methods
+- **🤖 Comprehensive Algorithm Collection**: Integrates 21 detection algorithms and supports 15 widely-used datasets, with continuous updates to include emerging methods
 - **📝 Unified API Design**: Implements algorithms with a consistent interface, allowing seamless data preparation and integration across all models
 - **🔧 Modular Components**: Provides customizable components for each algorithm, enabling users to adjust models to specific needs
 - **🛠️ Rich Utility Functions**: Offers tools designed to simplify the construction of social event detection workflows
@@ -159,6 +362,8 @@ The library integrates methods ranging from classic approaches like LDA and BiLS
 - **HCRC**: Hybrid Graph Contrastive Learning for Social Event Detection (HCRC) captures comprehensive semantic and structural information from social messages. Using hybrid graph contrastive learning and reinforced incremental clustering, HCRC outperforms baselines across various experimental settings.
 - **UCLSED**: Uncertainty-Guided Class Imbalance Learning Framework (UCLSED) enhances model generalization in imbalanced social event detection tasks. It uses an uncertainty-guided contrastive learning loss to handle uncertain classes and combines multi-view architectures with Dempster-Shafer theory for robust uncertainty estimation, achieving superior results.
 - **RPLMSED**: Relational Prompt-Based Pre-Trained Language Models for Social Event Detection (RPLMSED) uses pairwise message modeling to address missing and noisy edges in social message graphs. It leverages content and structural information with a clustering constraint to enhance message representation, achieving state-of-the-art performance in various detection tasks.
+- **PromptSED**: An evolving, topic-enhanced social event detection framework that dynamically integrates topic information from social streams without manual labeling. By combining prompt learning with selective topic injection, PromptSED achieves superior performance in incremental and real-time event detection, setting new benchmarks.
+- **DAMe**: Personalized Federated Social Event Detection with Dual Aggregation Mechanism introduces a novel federated learning framework incorporating local aggregation through Bayesian optimization and global aggregation based on structural entropy. DAMe enhances model performance by preserving local characteristics while integrating external knowledge, achieving robustness against injection attacks.
 - **HISevent**: Structural Entropy-Based Social Event Detection is an unsupervised tool that explores message correlations without labeling or predetermining event numbers. HISevent combines GNN-based methods' advantages with efficient performance, achieving new state-of-the-art results in closed- and open-set settings.
 - **ADPSEMEvent**: Adaptive Differential Privacy Social Event Message Event Detection is an unsupervised framework that prioritizes privacy while detecting social events. It uses a two-stage approach: constructing a private message graph using adaptive differential privacy, then applying a novel 2-dimensional structural entropy minimization algorithm for event detection. This method effectively balances privacy protection with data utility.
 - **HyperSED**: Hyperbolic Space-Based Social Event Detection is an unsupervised framework that models social messages using semantic-based anchor graphs in hyperbolic space. It efficiently detects events by leveraging structural and geometric properties, achieving state-of-the-art performance with significant improvements in efficiency and effectiveness.
@@ -184,6 +389,8 @@ SocialED implements the following algorithms:
 | HCRC | 2023 | GNNs | Online | Unsupervised | [Guo2023hcrc](https://www.sciencedirect.com/science/article/abs/pii/S0950705123009759) |
 | UCLSED | 2023 | GNNs | Offline | Supervised | [Ren2023uclsad](https://ieeexplore.ieee.org/abstract/document/10285435) |
 | RPLMSED | 2024 | PLMs | Online | Supervised | [Li2024rplmsed](https://dl.acm.org/doi/abs/10.1145/3695869) |
+| PromptSED | 2025 | PLMs | Online | Supervised | [Yu2025promptsed](https://ssrn.com/abstract=5120706) |
+| DAMe | 2024 | GNNs | Online | Supervised | [Yu2024dame](https://dblp.org/rec/journals/corr/abs-2409-00614) |
 | HISEvent | 2024 | Community | Online | Unsupervised | [Cao2024hisevent](https://ojs.aaai.org/index.php/AAAI/article/view/28666) |
 | ADPSEMEvent | 2024 | Community | Online | Unsupervised | [Yang2024adpsemevent](https://dl.acm.org/doi/abs/10.1145/3627673.3679537) |
 | HyperSED | 2024 | Community | Online | Unsupervised | [Yu2024hypersed](https://arxiv.org/abs/2412.10712) |

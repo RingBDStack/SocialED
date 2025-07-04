@@ -121,21 +121,6 @@ RPLMSED
    :undoc-members:
    :show-inheritance:
 
-DAMe
----------------------------------
-
-.. automodule:: SocialED.detector.dame
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-PromptSED
----------------------------------
-
-.. automodule:: SocialED.detector.promptsed
-   :members:
-   :undoc-members:
-   :show-inheritance:
 
 HISEvent
 ---------------------------------
