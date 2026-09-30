@@ -9,16 +9,17 @@
 [![Testing](https://github.com/ChenBeici/SocialED/actions/workflows/pytest.yml/badge.svg)](https://github.com/ChenBeici/SocialED/actions/workflows/pytest.yml)
 [![License](https://img.shields.io/github/license/RingBDStack/SocialED.svg)](https://github.com/RingBDStack/SocialED/blob/master/LICENSE)
 [![CodeQL](https://github.com/RingBDStack/SocialED/actions/workflows/codeql.yml/badge.svg)](https://github.com/RingBDStack/SocialED/actions/workflows/codeql.yml)
-[![arXiv](https://img.shields.io/badge/cs.LG-2412.13472-b31b1b?logo=arxiv&logoColor=red)](https://arxiv.org/abs/2412.13472)
+[![Springer](https://img.shields.io/badge/Springer-10.1007/978--981--95--5722--6_22-b31b1b?logo=springer&logoColor=red)](https://link.springer.com/chapter/10.1007/978-981-95-5722-6_22)
 
 </div>
-
 
 ---
 
 # SocialED
 
 A Python Library for Social Event Detection
+
+**🏆 Awarded Best Demo Paper at APWeb-WAIM 2025**
 
 ## What is Social Event Detection?
 
